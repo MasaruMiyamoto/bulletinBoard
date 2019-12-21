@@ -1,0 +1,2 @@
+# mac対策 .DS_Storeは不要なので、コミット対象外
+.DS_Store
