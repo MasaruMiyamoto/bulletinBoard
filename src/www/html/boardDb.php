@@ -4,6 +4,8 @@ $db_name = 'board_db';
 $db_user = 'board_user';
 $db_pass = 'board_pass';
 
+var_dump($_POST);
+
 // PHPのエラーを表示するように設定
 error_reporting(E_ALL & ~E_NOTICE);
 
@@ -18,6 +20,11 @@ try {
             ];
     //DB接続
     $pdo = new PDO($dsn, $db_user, $db_pass, $option);
+
+    //ログイン画面から遷移した場合
+    if (isset($_POST['login']) == true){
+        //IDと名前を表示する。
+    }
 
     //書き込みがある場合、boardテーブルに書き込み内容を追加
     if (isset($_POST['send']) == true) {
