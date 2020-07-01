@@ -1,9 +1,11 @@
-$(document).ready(function() {
+$(function() {
+    var path = window.location;
+    console.log(path);
     $('#login').click(function(){
         alert('click');
 
         $.ajax({
-            url : '/php/test/test.php',
+            url : path + 'test.php',
             type : 'post',
             dataType : 'json',
             data : ''
